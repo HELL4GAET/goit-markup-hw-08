@@ -1,0 +1,78 @@
+.policy input {
+    border: none;
+    outline: none;
+}
+
+.policy {
+    font-family: "Roboto", sans-serif;
+
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+    color: $text-color;
+    border: none;
+    outline: none;
+}
+
+.policy-link {
+    color: $accent-color;
+    margin-left: 4px;
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.icon-checkbox {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $primary-color;
+    border-radius: 2px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: 7px;
+
+    .policy:hover & {
+        border-color: $accent-color;
+    }
+}
+
+.checkbox:checked+.icon-checkbox {
+    background-color: $accent-color;
+    background-image: url(../images/accept-icon.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: $accent-color;
+}
+
+.policy {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.mail-form:focus {
+    outline: 1px solid $accent-color;
+    color: $background-color;
+    font-family: "Roboto", sans-serif;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+}

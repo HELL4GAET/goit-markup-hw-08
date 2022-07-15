@@ -1,0 +1,21 @@
+.footer-contact__logo {
+    font-family: Raleway, sans-serif;
+    min-width: 145px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+    color: $background-color;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+
+.footer-contact__span {
+    color: $accent-color;
+}
