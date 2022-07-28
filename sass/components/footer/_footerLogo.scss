@@ -13,6 +13,13 @@
     &:focus {
         color: $accent-color;
     }
+
+    @media screen and (min-width:1200px) {
+        text-align: start;
+            display: flex;
+    }
+
+   
 }
 
 

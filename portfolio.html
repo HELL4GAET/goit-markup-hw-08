@@ -23,6 +23,7 @@
           <a href="./index.html" class="main-nav__logo">
             <span class="main-nav__label">Web</span>Studio</a
           >
+
           <ul class="site-nav">
             <li class="site-nav__item">
               <a class="site-nav__link" href="./index.html">Студия</a>
@@ -59,12 +60,75 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__icon">
+            <use href="./images/symbol-defs.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- фильтр -->
     <main>
+      <!-- Бургер меню -->
+
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-toggle js-close-menu">
+          <svg class="menu-toggle__icon">
+            <use href="./images/symbol-defs.svg#icon-menu-cross"></use>
+          </svg>
+        </button>
+
+        <ul class="burger-navigation">
+          <li class="burger-navigation__item">
+            <a href="./index.html" class="burger-navigation__link">Студия</a>
+          </li>
+          <li class="burger-navigation__item">
+            <a
+              href="./portfolio.html"
+              class="burger-navigation__link burger-navigation__link--active"
+              >Портфолио</a
+            >
+          </li>
+          <li class="burger-navigation__item">
+            <a href="#" class="burger-navigation__link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="burger-contacts">
+          <li class="burger-contacts__item">
+            <a href="tel:+380961111111" class="burger-contacts__link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="burger-contacts__item">
+            <a href="mailto:info@devstudio.com" class="burger-contacts__link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="social-networks">
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Instagram</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Twitter</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Facebook</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
       <section class="section filter">
-        <div class="container">
+        <div class="site-container">
           <h1 hidden>Навигация</h1>
           <ul class="filter__list">
             <li class="filter__item">
@@ -94,11 +158,33 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img
-                      src="./images/notebook.jpg"
-                      alt="notebook"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/notebook-1200.jpg    1x,
+                          ./images/notebook-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/notebook-768.jpg    1x,
+                          ./images/notebook-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/notebook-480.jpg    1x,
+                          ./images/notebook-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img
+                        src="./images/notebook-1200.jpg"
+                        alt="Экран ноутбука с открытым сайтом"
+                      />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -121,11 +207,33 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img
-                      src="./images/players.jpg"
-                      alt="notebook"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/players-1200.jpg    1x,
+                          ./images/players-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/players-768.jpg    1x,
+                          ./images/players-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/players-480.jpg    1x,
+                          ./images/players-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img
+                        src="./images/notebook-1200.jpg"
+                        alt="Баскетболисты"
+                      />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -148,11 +256,33 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img
-                      src="./images/seafood.jpg"
-                      alt="notebook"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/Seafood-1200.jpg    1x,
+                          ./images/Seafood-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/Seafood-768.jpg    1x,
+                          ./images/Seafood-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/Seafood-480.jpg    1x,
+                          ./images/Seafood-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img
+                        src="./images/Seafood-1200.jpg"
+                        alt="Ресторан Seafood"
+                      />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -175,11 +305,30 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img
-                      src="./images/headphones.png"
-                      alt="notebook"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/headphones-1200.jpg    1x,
+                          ./images/headphones-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/headphones-768.jpg    1x,
+                          ./images/headphones-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/headphones-480.jpg    1x,
+                          ./images/headphones-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img src="./images/headphones-1200.jpg" alt="Наушники" />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -202,7 +351,30 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img src="./images/boxes.jpg" alt="notebook" width="370" />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/boxes-1200.jpg    1x,
+                          ./images/boxes-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/boxes-768.jpg    1x,
+                          ./images/boxes-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/boxes-480.jpg    1x,
+                          ./images/boxes-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img src="./images/boxes-1200.jpg" alt="Коробки" />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -225,11 +397,33 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img
-                      src="./images/inspiration.jpg"
-                      alt="notebook"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/monitor-1200.jpg    1x,
+                          ./images/monitor-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/monitor-768.jpg    1x,
+                          ./images/monitor-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/monitor-480.jpg    1x,
+                          ./images/monitor-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img
+                        src="./images/monitor-1200.jpg"
+                        alt="Компьютерный монитор"
+                      />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -252,11 +446,30 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img
-                      src="./images/limited.jpg"
-                      alt="notebook"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/book-1200.jpg    1x,
+                          ./images/book-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/book-768.jpg    1x,
+                          ./images/book-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/book-480.jpg    1x,
+                          ./images/book-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img src="./images/book-1200.jpg" alt="Книга" />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -279,7 +492,30 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img src="./images/lab.jpg" alt="notebook" width="370" />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/label-1200.jpg    1x,
+                          ./images/label-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/label-768.jpg    1x,
+                          ./images/label-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/label-480.jpg    1x,
+                          ./images/label-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img src="./images/label-1200.jpg" alt="Этикетка" />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -302,11 +538,33 @@
               <article class="card">
                 <div class="overlay-system">
                   <div class="card__thumb">
-                    <img
-                      src="./images/business.jpg"
-                      alt="notebook"
-                      width="370"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/note-work-1200.jpg    1x,
+                          ./images/note-work-1200@2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/note-work-768.jpg    1x,
+                          ./images/note-work-768@2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/note-work-480.jpg    1x,
+                          ./images/note-work-480@2x.jpg 2x
+                        "
+                        media="(max-width:767px)"
+                      />
+                      <img
+                        src="./images/note-work-1200.jpg"
+                        alt="Работа за ноутбуком"
+                      />
+                    </picture>
                   </div>
 
                   <div class="card__overlay">
@@ -332,65 +590,75 @@
     <footer class="footer">
       <div class="site-container">
         <div class="footer-container">
-          <div class="footer-contact">
-            <a class="footer-contact__logo" href="./index.html"
-              ><span class="footer-contact__span">Web</span>Studio</a
-            >
-            <address class="footer-contact__location">
-              <ul class="footer-contact__list">
-                <li class="footer-contact__item">
-                  г. Киев, пр-т Леси Украинки, 26
+          <div class="footer__768-wrapper">
+            <div class="footer-contact">
+              <a class="footer-contact__logo" href="./index.html"
+                ><span class="footer-contact__span">Web</span>Studio</a
+              >
+              <address class="footer-contact__location">
+                <ul class="footer-contact__list">
+                  <li class="footer-contact__item">
+                    г. Киев, пр-т Леси Украинки, 26
+                  </li>
+                  <li class="footer-contact__item">
+                    <a
+                      class="footer-contact__connection"
+                      href="mailto:info@example.com"
+                      >info@example.com</a
+                    >
+                  </li>
+                  <li class="footer-contact__item">
+                    <a
+                      href="tel:+380961111111"
+                      class="footer-contact__connection"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+
+            <!-- Социальные сети -->
+
+            <div class="socials-links">
+              <p class="socials-links__join">присоединяйтесь</p>
+              <ul class="socials-links__list">
+                <li class="socials-links__item">
+                  <a href="" class="socials-links__link"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-instagram-2"
+                      ></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="footer-contact__item">
-                  <a
-                    class="footer-contact__connection"
-                    href="mailto:info@example.com"
-                    >info@example.com</a
-                  >
+                <li class="socials-links__item">
+                  <a href="" class="socials-links__link"
+                    ><svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="footer-contact__item">
-                  <a href="tel:+380961111111" class="footer-contact__connection"
-                    >+38 096 111 11 11</a
-                  >
+                <li class="socials-links__item">
+                  <a href="" class="socials-links__link"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-facebook-1"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials-links__item">
+                  <a href="" class="socials-links__link"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-linkedin-1"
+                      ></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
-          </div>
-
-          <!-- Социальные сети -->
-
-          <div class="socials-links">
-            <p class="socials-links__join">присоединяйтесь</p>
-            <ul class="socials-links__list">
-              <li class="socials-links__item">
-                <a href="" class="socials-links__link"
-                  ><svg width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials-links__item">
-                <a href="" class="socials-links__link"
-                  ><svg width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials-links__item">
-                <a href="" class="socials-links__link"
-                  ><svg width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials-links__item">
-                <a href="" class="socials-links__link"
-                  ><svg width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
 
           <!-- Форма подписки -->
@@ -398,12 +666,12 @@
           <div class="form-footer">
             <p class="form-footer__name">Подпишитесь на рассылку</p>
             <form name="email" autocomplete="on" class="subscription">
-              <label>
+              <label class="subscription__label">
                 <input
                   type="text"
                   name="email"
                   placeholder="E-mail"
-                  class="subscription__label"
+                  class="subscription__input"
                 />
               </label>
 
@@ -418,5 +686,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

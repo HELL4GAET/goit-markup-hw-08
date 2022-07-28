@@ -24,6 +24,7 @@
           <a href="./index.html" class="main-nav__logo">
             <span class="main-nav__label">Web</span>Studio</a
           >
+
           <ul class="site-nav">
             <li class="site-nav__item">
               <a class="site-nav__link site-nav__current" href="./index.html"
@@ -58,12 +59,77 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__icon">
+            <use href="./images/symbol-defs.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <!-- Основная часть -->
 
     <main>
+      <!-- Бургер меню -->
+
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-toggle js-close-menu">
+          <svg class="menu-toggle__icon">
+            <use href="./images/symbol-defs.svg#icon-menu-cross"></use>
+          </svg>
+        </button>
+
+        <ul class="burger-navigation">
+          <li class="burger-navigation__item">
+            <a
+              href="./index.html"
+              class="burger-navigation__link burger-navigation__link--active"
+              >Студия</a
+            >
+          </li>
+          <li class="burger-navigation__item">
+            <a href="./portfolio.html" class="burger-navigation__link"
+              >Портфолио</a
+            >
+          </li>
+          <li class="burger-navigation__item">
+            <a href="#" class="burger-navigation__link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="burger-contacts">
+          <li class="burger-contacts__item">
+            <a href="tel:+380961111111" class="burger-contacts__link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="burger-contacts__item">
+            <a href="mailto:info@devstudio.com" class="burger-contacts__link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="social-networks">
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Instagram</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Twitter</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">Facebook</a>
+          </li>
+          <li class="social-networks__item">
+            <a href="#" class="social-networks__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
       <!-- Герой -->
 
       <section class="hero section">
@@ -165,11 +231,34 @@
             <li class="team__item">
               <article class="cards-set">
                 <div class="cards-thumb">
-                  <img
-                    src="./images/teamate1.jpg"
-                    alt="Игорь Демьяненко"
-                    width="270"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/main-designer-1200.jpg    1x,
+                        ./images/main-designer-1200@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/main-designer-768.jpg    1x,
+                        ./images/main-designer-768@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/main-designer-480.jpg    1x,
+                        ./images/main-designer-480@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/main-designer-480@2x.jpg"
+                      alt="Игорь Демьяненко"
+                      width="270"
+                    />
+                  </picture>
                 </div>
                 <div class="cards-content">
                   <h3 class="cards-content__title">Игорь Демьяненко</h3>
@@ -220,11 +309,34 @@
             <li class="team__item">
               <article class="cards-set">
                 <div class="cards-thumb">
-                  <img
-                    src="./images/teamate2.jpg"
-                    alt="Ольга Репина"
-                    width="270"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/front-designer-1200.jpg    1x,
+                        ./images/front-designer-1200@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/front-designer-768.jpg    1x,
+                        ./images/front-designer-768@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/front-designer-480.jpg    1x,
+                        ./images/front-designer-480@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/front-designer-480@2x.jpg"
+                      alt="Ольга Репина"
+                      width="270"
+                    />
+                  </picture>
                 </div>
                 <div class="cards-content">
                   <h3 class="cards-content__title">Ольга Репина</h3>
@@ -275,11 +387,34 @@
             <li class="team__item">
               <article class="cards-set">
                 <div class="cards-thumb">
-                  <img
-                    src="./images/teamate3.jpg"
-                    alt="Николай Тарасов"
-                    width="270"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/marketing-1200.jpg    1x,
+                        ./images/marketing-1200@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/marketing-768.jpg    1x,
+                        ./images/marketing-768@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/marketing-480.jpg    1x,
+                        ./images/marketing-480@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/main-designer-480@2x.jpg"
+                      alt="Николай Тарасов"
+                      width="270"
+                    />
+                  </picture>
                 </div>
                 <div class="cards-content">
                   <h3 class="cards-content__title">Николай Тарасов</h3>
@@ -330,11 +465,34 @@
             <li class="team__item">
               <article class="cards-set">
                 <div class="cards-thumb">
-                  <img
-                    src="./images/teamate4.jpg"
-                    alt="Михаил Ермаков"
-                    width="270"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/ui-designer-1200.jpg    1x,
+                        ./images/ui-designer-1200@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/ui-designer-768.jpg    1x,
+                        ./images/ui-designer-768@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/ui-designer-480.jpg    1x,
+                        ./images/ui-designer-480@2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/ui-designer-480@2x.jpg"
+                      alt="Михаил Ермаков"
+                      width="270"
+                    />
+                  </picture>
                 </div>
                 <div class="cards-content">
                   <h3 class="cards-content__title">Михаил Ермаков</h3>
@@ -443,65 +601,75 @@
     <footer class="footer">
       <div class="site-container">
         <div class="footer-container">
-          <div class="footer-contact">
-            <a class="footer-contact__logo" href="./index.html"
-              ><span class="footer-contact__span">Web</span>Studio</a
-            >
-            <address class="footer-contact__location">
-              <ul class="footer-contact__list">
-                <li class="footer-contact__item">
-                  г. Киев, пр-т Леси Украинки, 26
+          <div class="footer__768-wrapper">
+            <div class="footer-contact">
+              <a class="footer-contact__logo" href="./index.html"
+                ><span class="footer-contact__span">Web</span>Studio</a
+              >
+              <address class="footer-contact__location">
+                <ul class="footer-contact__list">
+                  <li class="footer-contact__item">
+                    г. Киев, пр-т Леси Украинки, 26
+                  </li>
+                  <li class="footer-contact__item">
+                    <a
+                      class="footer-contact__connection"
+                      href="mailto:info@example.com"
+                      >info@example.com</a
+                    >
+                  </li>
+                  <li class="footer-contact__item">
+                    <a
+                      href="tel:+380961111111"
+                      class="footer-contact__connection"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+
+            <!-- Социальные сети -->
+
+            <div class="socials-links">
+              <p class="socials-links__join">присоединяйтесь</p>
+              <ul class="socials-links__list">
+                <li class="socials-links__item">
+                  <a href="" class="socials-links__link"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-instagram-2"
+                      ></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="footer-contact__item">
-                  <a
-                    class="footer-contact__connection"
-                    href="mailto:info@example.com"
-                    >info@example.com</a
-                  >
+                <li class="socials-links__item">
+                  <a href="" class="socials-links__link"
+                    ><svg width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="footer-contact__item">
-                  <a href="tel:+380961111111" class="footer-contact__connection"
-                    >+38 096 111 11 11</a
-                  >
+                <li class="socials-links__item">
+                  <a href="" class="socials-links__link"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-facebook-1"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials-links__item">
+                  <a href="" class="socials-links__link"
+                    ><svg width="20" height="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-linkedin-1"
+                      ></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
-          </div>
-
-          <!-- Социальные сети -->
-
-          <div class="socials-links">
-            <p class="socials-links__join">присоединяйтесь</p>
-            <ul class="socials-links__list">
-              <li class="socials-links__item">
-                <a href="" class="socials-links__link"
-                  ><svg width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials-links__item">
-                <a href="" class="socials-links__link"
-                  ><svg width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials-links__item">
-                <a href="" class="socials-links__link"
-                  ><svg width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials-links__item">
-                <a href="" class="socials-links__link"
-                  ><svg width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
 
           <!-- Форма подписки -->
@@ -509,12 +677,12 @@
           <div class="form-footer">
             <p class="form-footer__name">Подпишитесь на рассылку</p>
             <form name="email" autocomplete="on" class="subscription">
-              <label>
+              <label class="subscription__label">
                 <input
                   type="text"
                   name="email"
                   placeholder="E-mail"
-                  class="subscription__label"
+                  class="subscription__input"
                 />
               </label>
 
@@ -529,6 +697,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 
     <!-- Модальное окно -->
 

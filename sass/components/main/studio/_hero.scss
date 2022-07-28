@@ -1,31 +1,98 @@
 .hero {
     text-align: center;
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    text-align: center;
+    
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-color: #2f303a;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4) 100%,
             rgba(47, 48, 58, 0.4) 100%),
-        url(../images/hero.jpg);
+        url(../images/hero-480.jpg);
+
+        // @media screen and (min-width:1200px) {
+        //     padding-top: 200px;
+        //     padding-bottom: 200px;
+        // }
+
+
+                   @media screen and (min-width:768px) {
+        
+                       
+                           background-image: linear-gradient(rgba(47, 48, 58, 0.4) 100%,
+                                   rgba(47, 48, 58, 0.4) 100%), url(../images/hero-768.jpg);
+                       
+        
+                   }
+        
+                   @media screen and (min-width:1200px) {
+        
+                       
+                           padding-top: 200px;
+                               padding-bottom: 200px;
+                               background-image: linear-gradient(rgba(47, 48, 58, 0.4) 100%,
+                                       rgba(47, 48, 58, 0.4) 100%), url(../images/hero-1200.jpg);
+                           
+        
+                   }                    
+
 }
 
+
+ @media screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4) 100%,
+                    rgba(47, 48, 58, 0.4) 100%), url(../images/hero-480@2x.jpg);
+    }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        .hero {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4) 100%,
+                        rgba(47, 48, 58, 0.4) 100%), url(../images/hero-768@2x.jpg);
+        }
+    }
+    @media screen and (min-width:1200px) {
+        .hero {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4) 100%,
+                        rgba(47, 48, 58, 0.4) 100%), url(../images/hero-1200@2x.jpg);
+            }
+    }
+}
+
+
+
+
 .hero__title {
+    
     font-family: Roboto, sans-serif;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    // font-size: 44px;
+    // line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $background-color;
+    // margin: 0;
+    // margin-bottom: 30px;
+
+    font-size: 26px;
+    line-height: 1.61;
     margin: 0;
     margin-bottom: 30px;
+
+
+    @media screen and (min-width:1200px) {
+        font-size: 44px;
+            line-height: 1.36;
+            
+    }
 }
 
 .hero__button {
+    
     cursor: pointer;
     color: $background-color;
     background-color: $accent-color;
@@ -46,4 +113,3 @@
         background-color: #188ce8;
     }
 }
-

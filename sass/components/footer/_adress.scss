@@ -3,19 +3,38 @@
     line-height: 1.71;
     color: $background-color;
     font-style: normal;
+    text-align: start;
+
 }
 
 .footer-contact__list {
     margin: 0;
     padding: 0;
+
+    @media screen and (min-width:1200px) {
+        text-align: start;
+    }
 }
 
 .footer-contact__item {
-    margin-bottom: 9px;
 
+    margin-bottom: 8px;
     &:last-child {
         margin-bottom: 0;
     }
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 9px;
+        
+            &:last-child {
+                margin-bottom: 0;
+            }
+    }
+    // margin-bottom: 9px;
+
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
 }
 
 
